@@ -1,157 +1,189 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Lemon&display=swap');
 
 :root {
-  --laranja: #ff862a;
-  --azul: #0077b6;
-  --areia: #ffe5b4;
-  --branco: #fff;
+  --laranja: #FF862A;
+  --azul: #1E90FF;
+  --areia: #fce5b5;
   --preto: #000;
+  --branco: #fff;
 }
 
 body {
   font: 1rem 'Montserrat', sans-serif;
-  background: var(--areia);
-  margin: 0;
-  padding: 0;
-  color: var(--preto);
+  background: var(--branco);
 }
 
-h1, h2, h3 {
-  font-family: 'Lemon', cursive;
+header, .formulario {
+  background: var(--branco);
+}
+
+section {
+  padding-bottom: 5rem;
+}
+
+.nav-link {
+  color: var(--laranja);
+  font-weight: 600;
+}
+
+.inicio-fundo {
+  background: url('img/fundo-praia.jpg') right/cover no-repeat;
+  border-radius: 40px;
+  width: 100%;
+  height: 606px;
+  padding: 40px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.img-inicio {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 40rem;
+  height: auto;
+  border-radius: 20px;
+}
+
+.esquerda-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.botao-inicio {
+  background: var(--laranja);
+  border-radius: 30px;
+  border: none;
+  width: 14em;
+  height: 3em;
+}
+
+.display-4 {
+  text-shadow: -4px 4px var(--azul);
+}
+
+/* Seção explicativa */
+#futevolei {
+  position: relative;
+  padding-top: 5rem;
+  margin: 3rem 0;
+  background: url('img/fundo-areia.jpg') bottom center repeat;
+  border-radius: 20px;
+}
+
+#futevolei .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+h2 {
+  font-family: 'Lemon', serif;
+  font-size: 2.5em;
   color: var(--azul);
 }
 
-p {
-  line-height: 1.6;
-}
-
-/* Cabeçalho */
-header {
-  background: var(--branco);
-  padding: 2rem 1rem;
-  border-bottom: 4px solid var(--laranja);
-}
-
-header .logo {
-  max-width: 120px;
-  margin-bottom: 1rem;
-}
-
-.titulo {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-.subtitulo {
-  font-size: 1.2rem;
-  color: var(--preto);
-}
-
-/* Seção sobre */
-section {
-  padding: 3rem 1rem;
-}
-
-.sombra {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
 /* Galeria */
-#galeria img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: transform 0.3s;
+#galeria {
+  background: var(--areia);
+  padding: 3rem 0;
 }
 
-#galeria img:hover {
-  transform: scale(1.05);
+.fundo-galeria {
+  background: url('img/fundo-praia2.jpg') bottom right no-repeat;
+  background-size: cover;
+  border-radius: 20px;
 }
 
-/* Formulário */
+/* Contato */
+#contato {
+  background: url('img/fundo-praia.jpg') center/cover no-repeat;
+  padding: 4rem 0;
+}
+
 .formulario {
-  background: var(--branco);
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0001;
+  font-weight: bold;
+  background: var(--branco);
 }
 
-.formulario .btn-primary {
-  background: var(--laranja);
+.formulario button,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary,
+.botao-inicio {
+  background: var(--azul);
   border: none;
-}
-
-.formulario .btn-primary:hover {
-  background: var(--azul);
-}
-
-/* Rodapé */
-footer {
-  background: var(--azul);
+  font-weight: bold;
   color: var(--branco);
 }
 
-/* Barra acessibilidade */
-.acessibilidade {
+.form-control {
+  background: #F1EDEF;
+}
+
+/* Acessibilidade */
+.menu-acessibilidade {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 2rem;
+  right: 20px;
   z-index: 1000;
 }
 
-#botao-acessibilidade {
-  background: var(--laranja);
-  color: var(--branco);
-  border: none;
-  padding: 0.6rem;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
+.rotacao-botao {
+  transform: rotate(-90deg);
+  transform-origin: right center;
 }
 
-.lista-acessibilidade {
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem;
+.opcoes-acessibilidade {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+  margin-bottom: 5px;
+}
+
+.apresenta-lista {
   display: none;
-  position: absolute;
-  right: 0;
-  background: var(--branco);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.lista-acessibilidade li {
-  margin: 0.3rem 0;
-}
-
-.lista-acessibilidade button {
-  background: var(--azul);
+/* Alto contraste */
+.alto-contraste {
+  background: var(--preto);
   color: var(--branco);
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
-.lista-acessibilidade button:hover {
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.alto-contraste .nav-link {
+  color: var(--laranja);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary {
   background: var(--laranja);
-}
-
-/* Contraste */
-body.contraste {
-  background: var(--preto);
-  color: var(--branco);
-}
-
-body.contraste header,
-body.contraste .formulario {
-  background: var(--preto);
-  color: var(--branco);
-  border: 2px solid var(--branco);
-}
-
-body.contraste footer {
-  background: var(--branco);
   color: var(--preto);
+}
+
+.alto-contraste #futevolei,
+.alto-contraste .fundo-galeria {
+  background: none;
+}
+
+.alto-contraste #galeria {
+  background: var(--preto);
 }
