@@ -10,7 +10,7 @@
   --preto: #000;
 }
 
-/* RESET BASICO */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to bottom, var(--azul) 0%, var(--areia) 70%);
+  background: var(--branco);
   color: #333;
   line-height: 1.6;
 }
@@ -40,7 +40,6 @@ header h1 {
   text-shadow: 2px 2px var(--azul);
 }
 
-/* NAVIGATION */
 .nav-link {
   color: var(--laranja);
   font-weight: 600;
@@ -55,14 +54,32 @@ header h1 {
 
 /* SEÇÃO INICIAL */
 .inicio-fundo {
-  background: linear-gradient(to top right, var(--azul) 50%, var(--areia) 100%);
+  background: url('img/fundo-praia.jpg') right/cover no-repeat;
   border-radius: 40px;
   width: 100%;
-  height: 600px;
+  height: 606px;
   padding: 40px;
   margin: 2rem auto;
   position: relative;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.inicio-fundo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(255,255,255,0.2), rgba(0,0,0,0.1));
+  border-radius: 40px;
+}
+
+.img-inicio {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 40rem;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .esquerda-conteudo {
@@ -71,6 +88,7 @@ header h1 {
   align-items: flex-start;
   gap: 1rem;
   z-index: 2;
+  position: relative;
 }
 
 .botao-inicio {
@@ -90,12 +108,31 @@ header h1 {
 
 /* SEÇÃO FUTEVÔLEI */
 #futevolei {
+  position: relative;
   padding: 5rem 2rem;
   margin: 3rem 0;
-  background: linear-gradient(to bottom, var(--areia) 0%, var(--laranja) 50%);
+  background: url('img/fundo-areia.jpg') bottom center repeat;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   text-align: center;
+}
+
+#futevolei::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(255,255,255,0.1), rgba(0,0,0,0.05));
+  border-radius: 20px;
+}
+
+#futevolei .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 #futevolei h2 {
@@ -107,28 +144,24 @@ header h1 {
 
 /* GALERIA */
 #galeria {
-  background: linear-gradient(to right, var(--areia), var(--amarelo-sol));
-  padding: 3rem 1rem;
+  background: var(--areia);
+  padding: 3rem 0;
   border-radius: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
 }
 
-#galeria div {
-  background: var(--laranja);
-  width: 200px;
-  height: 150px;
-  border-radius: 15px;
+.fundo-galeria {
+  background: url('img/fundo-praia2.jpg') bottom right no-repeat;
+  background-size: cover;
+  border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* CONTATO */
 #contato {
-  background: linear-gradient(to top, var(--areia) 0%, var(--azul) 70%);
-  padding: 4rem 1rem;
+  background: url('img/fundo-praia.jpg') center/cover no-repeat;
+  padding: 4rem 0;
   border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   text-align: center;
 }
 
@@ -157,4 +190,59 @@ header h1 {
   background: #F1EDEF;
   border-radius: 10px;
   padding: 0.5rem;
+}
+
+/* ACESSIBILIDADE */
+.menu-acessibilidade {
+  position: fixed;
+  top: 2rem;
+  right: 20px;
+  z-index: 1000;
+}
+
+.rotacao-botao {
+  transform: rotate(-90deg);
+  transform-origin: right center;
+}
+
+.opcoes-acessibilidade {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+  margin-bottom: 5px;
+}
+
+/* ALTO CONTRASTE */
+.alto-contraste {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.alto-contraste .nav-link {
+  color: var(--laranja);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button {
+  background: var(--laranja);
+  color: var(--preto);
+}
+
+.alto-contraste #futevolei,
+.alto-contraste .fundo-galeria {
+  background: none;
+}
+
+.alto-contraste #galeria {
+  background: var(--preto);
 }
