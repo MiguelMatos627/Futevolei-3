@@ -1,1 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Lemon&display=swap');
 
+:root {
+  --laranja: #ff862a;
+  --azul: #0077b6;
+  --areia: #ffe5b4;
+  --branco: #fff;
+  --preto: #000;
+}
+
+body {
+  font: 1rem 'Montserrat', sans-serif;
+  background: var(--areia);
+  margin: 0;
+  padding: 0;
+  color: var(--preto);
+}
+
+h1, h2, h3 {
+  font-family: 'Lemon', cursive;
+  color: var(--azul);
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background: var(--branco);
+  padding: 2rem 1rem;
+  border-bottom: 4px solid var(--laranja);
+}
+
+header .logo {
+  max-width: 120px;
+  margin-bottom: 1rem;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: var(--preto);
+}
+
+/* Seção sobre */
+section {
+  padding: 3rem 1rem;
+}
+
+.sombra {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Galeria */
+#galeria img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+#galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Formulário */
+.formulario {
+  background: var(--branco);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.formulario .btn-primary {
+  background: var(--laranja);
+  border: none;
+}
+
+.formulario .btn-primary:hover {
+  background: var(--azul);
+}
+
+/* Rodapé */
+footer {
+  background: var(--azul);
+  color: var(--branco);
+}
+
+/* Barra acessibilidade */
+.acessibilidade {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+#botao-acessibilidade {
+  background: var(--laranja);
+  color: var(--branco);
+  border: none;
+  padding: 0.6rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.lista-acessibilidade {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  display: none;
+  position: absolute;
+  right: 0;
+  background: var(--branco);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.lista-acessibilidade li {
+  margin: 0.3rem 0;
+}
+
+.lista-acessibilidade button {
+  background: var(--azul);
+  color: var(--branco);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.lista-acessibilidade button:hover {
+  background: var(--laranja);
+}
+
+/* Contraste */
+body.contraste {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+body.contraste header,
+body.contraste .formulario {
+  background: var(--preto);
+  color: var(--branco);
+  border: 2px solid var(--branco);
+}
+
+body.contraste footer {
+  background: var(--branco);
+  color: var(--preto);
+}

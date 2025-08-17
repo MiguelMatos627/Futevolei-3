@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Futevôlei</title>
 
+  <!-- Fonte e Bootstrap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Lemon&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Estilo -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barra de acessibilidade -->
+  <div class="acessibilidade">
+    <button id="botao-acessibilidade" aria-expanded="false" aria-controls="opcoes-acessibilidade">♿</button>
+    <ul id="opcoes-acessibilidade" class="lista-acessibilidade">
+      <li><button id="aumentar-fonte">A+</button></li>
+      <li><button id="diminuir-fonte">A-</button></li>
+      <li><button id="alterna-contraste">Contraste</button></li>
+    </ul>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header id="inicio" class="text-center p-4">
+    <img src="img/logo-futevolei.png" alt="Logo Futevôlei" class="logo">
+    <h1 class="titulo">Futevôlei</h1>
+    <p class="subtitulo">Esporte, diversão e energia na praia</p>
+  </header>
+
+  <!-- Seção sobre Futevôlei -->
+  <section id="futevolei" class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="img/futevolei-principal.jpg" class="img-fluid rounded sombra" alt="Partida de futevôlei na praia">
+      </div>
+      <div class="col-md-6">
+        <h2>Sobre o Futevôlei</h2>
+        <p>
+          O futevôlei é um esporte que une técnica, habilidade e a energia contagiante da praia. 
+          Criado no Rio de Janeiro nos anos 60, ele combina elementos do futebol e do vôlei, 
+          sendo jogado com uma bola em uma quadra de areia.
+        </p>
+        <p>
+          Hoje o futevôlei é praticado em várias partes do mundo, promovendo saúde, amizade e competição saudável.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+  <section id="galeria" class="py-5 text-center">
+    <h2>Galeria</h2>
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <img src="img/futevolei1.jpg" class="img-fluid rounded sombra" alt="Jogador de futevôlei 1">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/futevolei2.jpg" class="img-fluid rounded sombra" alt="Jogador de futevôlei 2">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/futevolei3.jpg" class="img-fluid rounded sombra" alt="Jogador de futevôlei 3">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/futevolei4.jpg" class="img-fluid rounded sombra" alt="Jogador de futevôlei 4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Contato</h2>
+      <form class="formulario mx-auto" style="max-width:600px;">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" id="nome" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="mensagem" class="form-label">Mensagem</label>
+          <textarea id="mensagem" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="text-center p-3">
+    <p>© 2025 Futevôlei | Desenvolvido com paixão pelo esporte</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="script.js"></script>
+</body>
+</html>
