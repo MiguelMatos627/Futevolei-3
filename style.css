@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Lemon&display=swap');
 
+/* VARIÁVEIS */
 :root {
   --laranja: #FF862A;
   --azul: #1E90FF;
@@ -51,6 +52,7 @@ header .subtitulo {
   text-shadow: 1px 1px rgba(0,0,0,0.2);
 }
 
+/* NAV LINKS */
 .nav-link {
   color: var(--laranja);
   font-weight: 600;
@@ -168,18 +170,60 @@ footer {
 .acessibilidade {
   position: fixed;
   top: 2rem;
-  right: 20px;
+  right: 2rem;
   z-index: 1000;
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* Botão principal ♿ com Font Awesome */
+#acessibilidade > button {
+  font-size: 2rem;
+  color: var(--laranja);
+  background: var(--branco);
+  border: 2px solid var(--laranja);
+  border-radius: 10px;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#acessibilidade > button:hover {
+  background: var(--laranja);
+  color: var(--branco);
+}
+
+/* Lista de opções */
 .lista-acessibilidade {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
+/* Botões da lista com ícones */
 .lista-acessibilidade button {
-  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--laranja);
+  background: var(--branco);
+  border: 2px solid var(--laranja);
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lista-acessibilidade button:hover {
+  background: var(--laranja);
+  color: var(--branco);
+}
+
+.lista-acessibilidade i,
+#acessibilidade > button i {
+  font-size: 1.2em;
 }
 
 /* ALTO CONTRASTE */
@@ -214,3 +258,4 @@ footer {
 .alto-contraste #galeria {
   background: var(--preto);
 }
+

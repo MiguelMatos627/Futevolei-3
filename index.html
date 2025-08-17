@@ -9,20 +9,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Lemon&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  
   <!-- Estilo -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Barra de acessibilidade -->
-  <div class="acessibilidade">
-    <button id="botao-acessibilidade" aria-expanded="false" aria-controls="opcoes-acessibilidade">♿</button>
-    <ul id="opcoes-acessibilidade" class="lista-acessibilidade">
-      <li><button id="aumentar-fonte">A+</button></li>
-      <li><button id="diminuir-fonte">A-</button></li>
-      <li><button id="alterna-contraste">Contraste</button></li>
-    </ul>
-  </div>
+  <!-- Barra de Acessibilidade -->
+<div class="acessibilidade" id="acessibilidade">
+  <button id="botao-acessibilidade" aria-expanded="false" aria-controls="opcoes-acessibilidade">
+    <i class="fas fa-wheelchair"></i>
+  </button>
+  <ul id="opcoes-acessibilidade" class="lista-acessibilidade">
+    <li><button id="aumentar-fonte"><i class="fas fa-plus"></i> A+</button></li>
+    <li><button id="diminuir-fonte"><i class="fas fa-minus"></i> A-</button></li>
+    <li><button id="alterna-contraste"><i class="fas fa-adjust"></i> Contraste</button></li>
+  </ul>
+</div>
+
 
   <!-- Cabeçalho -->
   <header id="inicio" class="text-center p-4">
@@ -39,6 +43,9 @@
       </div>
       <div class="col-md-6">
         <h2>Sobre o Futevôlei</h2>
+        <p>
+
+        </p>
         <p>
           O futevôlei é um esporte que une técnica, habilidade e a energia contagiante da praia. 
           Criado no Rio de Janeiro nos anos 60, ele combina elementos do futebol e do vôlei, 
