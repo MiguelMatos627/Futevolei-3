@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   contraste.onclick = () => toggle(document.body, 'alto-contraste');
 });
 
-// ScrollReveal para as seções do site de futevôlei
+
 ['#inicio', '#futevolei', '#galeria', '#contato'].forEach(id =>
   ScrollReveal().reveal(id, { delay: 500 })
 );
