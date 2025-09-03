@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Lemon&display=swap');
 
-
 :root {
   --laranja: #FF862A;
   --azul: #1E90FF;
@@ -10,7 +9,6 @@
   --branco: #fff;
   --preto: #000;
 }
-
 
 * {
   margin: 0;
@@ -25,7 +23,7 @@ body {
   line-height: 1.6;
 }
 
-
+/* Header */
 header {
   text-align: center;
   padding: 2rem 1rem;
@@ -52,7 +50,7 @@ header .subtitulo {
   text-shadow: 1px 1px rgba(0,0,0,0.2);
 }
 
-
+/* Links de navegação */
 .nav-link {
   color: var(--laranja);
   font-weight: 600;
@@ -65,7 +63,7 @@ header .subtitulo {
   text-decoration: underline;
 }
 
-
+/* Seção Futevôlei */
 #futevolei {
   position: relative;
   padding: 5rem 2rem;
@@ -101,25 +99,19 @@ header .subtitulo {
   text-shadow: 1px 1px var(--laranja);
 }
 
+/* Imagens com sombra */
 .sombra {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-
+/* Galeria */
 #galeria {
   background: var(--areia);
   padding: 3rem 0;
   border-radius: 20px;
 }
 
-.fundo-galeria {
-  background: url('img/fundo-praia2.jpg') bottom right no-repeat;
-  background-size: cover;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-
+/* Contato */
 #contato {
   background: url('img/fundo-praia.jpg') center/cover no-repeat;
   padding: 4rem 0;
@@ -158,7 +150,7 @@ header .subtitulo {
   padding: 0.5rem;
 }
 
-
+/* Footer */
 footer {
   background: var(--azul);
   color: var(--branco);
@@ -166,7 +158,7 @@ footer {
   box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
 }
 
-
+/* Acessibilidade */
 .acessibilidade {
   position: fixed;
   top: 2rem;
@@ -174,7 +166,6 @@ footer {
   z-index: 1000;
   font-family: 'Montserrat', sans-serif;
 }
-
 
 #acessibilidade > button {
   font-size: 2rem;
@@ -192,14 +183,12 @@ footer {
   color: var(--branco);
 }
 
-
 .lista-acessibilidade {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-
 
 .lista-acessibilidade button {
   display: flex;
@@ -226,7 +215,7 @@ footer {
   font-size: 1.2em;
 }
 
-
+/* Alto contraste */
 .alto-contraste {
   background: var(--preto);
   color: var(--branco);
@@ -259,3 +248,48 @@ footer {
   background: var(--preto);
 }
 
+/* Novas seções: Como Jogar e Benefícios */
+#como-jogar,
+#beneficios {
+  background: linear-gradient(135deg, #fce5b5 0%, #fff7e0 100%);
+  padding: 4rem 2rem;
+  margin: 3rem 0;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+#como-jogar h2,
+#beneficios h2 {
+  font-family: 'Lemon', cursive;
+  font-size: 2.2rem;
+  color: var(--azul);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px var(--laranja);
+}
+
+#como-jogar p,
+#beneficios p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+#como-jogar img,
+#beneficios img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  margin-bottom: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #como-jogar .row,
+  #beneficios .row {
+    flex-direction: column !important;
+  }
+}
