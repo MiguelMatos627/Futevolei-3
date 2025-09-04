@@ -168,12 +168,12 @@ footer {
 }
 
 #acessibilidade > button {
-  font-size: 2rem;
+  font-size: 1.5rem; /* menor */
   color: var(--laranja);
   background: var(--branco);
   border: 2px solid var(--laranja);
-  border-radius: 10px;
-  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem; /* reduzido */
   cursor: pointer;
   transition: 0.3s;
 }
@@ -184,23 +184,23 @@ footer {
 }
 
 .lista-acessibilidade {
-  margin-top: 10px;
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
 .lista-acessibilidade button {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 1.2rem;
+  gap: 4px;
+  font-size: 1rem;       /* menor */
   font-weight: 600;
   color: var(--laranja);
   background: var(--branco);
   border: 2px solid var(--laranja);
-  border-radius: 8px;
-  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem; /* reduzido */
   cursor: pointer;
   transition: 0.3s;
 }
@@ -212,7 +212,7 @@ footer {
 
 .lista-acessibilidade i,
 #acessibilidade > button i {
-  font-size: 1.2em;
+  font-size: 1em; /* ícones menores */
 }
 
 /* Alto contraste */
